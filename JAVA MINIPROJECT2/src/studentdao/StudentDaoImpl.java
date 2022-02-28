@@ -78,15 +78,14 @@ public class StudentDaoImpl implements StudentDao {
 			e.printStackTrace();
 		}
 	}
-	@Override
-	public void EditStudent() {
+	public void EditStudent(String j) {
 		// TODO Auto-generated method stub
 
-		boolean z=false;
-		System.out.println("Enter the Roll_no of student you want to Edit");
-		Scanner sc=new Scanner(System.in);
-		String j=sc.nextLine();
-		FileReader fr = null;
+		//boolean z=false;
+	//	System.out.println("Enter the Roll_no of student you want to Edit");
+	//	Scanner sc=new Scanner(System.in);
+	//	String j=sc.nextLine();
+	/*FileReader fr = null;
 		try {
 			fr = new FileReader("C:\\\\\\\\Users\\\\\\\\pcplanet\\\\\\\\eclipse-workspace\\\\\\\\JAVA MINIPROJECT2\\\\\\\\bin\\\\\\\\Accountant Details\\\\\\\\Student_Details.txt");
 		} catch (FileNotFoundException e1) {
@@ -109,11 +108,11 @@ public class StudentDaoImpl implements StudentDao {
 			e1.printStackTrace();
 		}
 		if (z)
-		{
+		{*/
 			String str5=" ";
-			System.out.println("Record is being loaded");
-			System.out.println("Student details are:Roll_no,Name,Email,Course, Fee,Paid,Due,Address,City,State,Country,ContactNo");
-			System.out.println(str);
+		 //	System.out.println("Record is being loaded");
+		//System.out.println("Student details are:Roll_no,Name,Email,Course, Fee,Paid,Due,Address,City,State,Country,ContactNo");
+	   //System.out.println(str);
 			Student s=new Student();
 			System.out.println("For data Updation:");
 			Scanner sc51 = new Scanner(System.in);
@@ -148,9 +147,9 @@ public class StudentDaoImpl implements StudentDao {
 				  {
 				        System.out.println("File created: " + myobj2.getName());
 				   }
-       else {
-				        System.out.println("File already exists.");
-				  }
+     //  else {
+		//		        System.out.println("File already exists.");
+		//		  }
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -171,12 +170,10 @@ public class StudentDaoImpl implements StudentDao {
 			}
 		System.out.println("Data Updated successfully");
 			}
-		else
-		{
-		System.out.println("Enter valid Roll_No");
-		}
-		
-	}
+		//else
+		//{
+		//System.out.println("Enter valid Roll_No");
+		//}
 
 	@Override
 	public void DueStudent() {
@@ -330,4 +327,39 @@ public class StudentDaoImpl implements StudentDao {
 			e.printStackTrace();
 		}
 	}
+
+	public int  loadrecord( String j) {
+		// TODO Auto-generated method stub
+	int c=0;
+		FileReader fr = null;
+		try {
+			fr = new FileReader("C:\\\\\\\\Users\\\\\\\\pcplanet\\\\\\\\eclipse-workspace\\\\\\\\JAVA MINIPROJECT2\\\\\\\\bin\\\\\\\\Accountant Details\\\\\\\\Student_Details.txt");
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		BufferedReader br2=new BufferedReader(fr);
+		String str=" ";
+		try {
+			try {
+				while((str=br2.readLine()) != null)
+				{
+					if(str.startsWith(j))
+					{
+						System.out.println(str);
+						c=1;
+					}
 }
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+}finally
+		{
+	
+		}
+		return c;
+	}
+}
+
+	

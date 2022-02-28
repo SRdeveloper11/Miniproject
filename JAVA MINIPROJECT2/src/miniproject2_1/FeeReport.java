@@ -160,7 +160,14 @@ class Accountant_Login_Section extends Student
 		student.Logout();
 		break;
 	case 3:
-		student.EditStudent();
+		System.out.println("Enter the Roll_no of student you want to Edit");
+		Scanner sc2=new Scanner(System.in);
+		String j=sc2.nextLine();
+		int x=student.loadrecord(j);
+		if(x==1)
+		{
+		student.EditStudent(j);
+		}
 		student.Logout();
 		break;
 	case 4:
