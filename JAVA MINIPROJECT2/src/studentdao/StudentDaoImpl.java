@@ -80,33 +80,6 @@ public class StudentDaoImpl implements StudentDao {
 	}
 	public void editstudent(Student  s) {
 			String str5=" ";
-			/*Student s=new Student();
-			System.out.println("For data Updation:");
-			Scanner sc51 = new Scanner(System.in);
-			System.out.println("Enter Roll Number:");
-			 s.setrollno(sc51.nextInt());
-			System.out.println("Enter Name:");
-			 s.setname(sc51.next());	
-			System.out.println("Enter Email:");
-			  s.setemail(sc51.next());
-			System.out.println("Enter Course:");
-			  s.setcourse(sc51.next());
-			System.out.println("Enter Total Fees:");
-			s.setfee(sc51.nextInt());
-			System.out.println("Enter Amount Paid:");
-			s.setpaid(sc51.nextInt());
-			System.out.println("Enter Due Amount:");
-			s.setdue(sc51.nextInt());
-			System.out.println("Enter Address:");
-			  s.setaddress(sc51.next());
-			System.out.println("Enter City:");
-			  s.setcity(sc51.next());
-			System.out.println("Enter State:");
-			  s.setstate(sc51.nextLine());
-			System.out.println("Enter Country:");
-			  s.setcountry(sc51.next());
-			System.out.println("Enter Contact Number:");
-			  s.setcontactno(sc51.next());*/
 			  String lineToAppend=("\n"+s.getname()+"\t\t"+s.getemail()+"\t\t"+s.getcourse()+"\t\t"+s.getfee()+"\t\t"+s.getpaid()+"\t\t"+s.getdue()+"\t\t"+s.getaddress()+"\t\t"+s.getcity()+"\t\t"+s.getstate()+"\t\t"+s.getcountry()+"\t\t"+s.getcontactno());    
 			File myobj2=new File("C:\\\\\\\\Users\\\\\\\\pcplanet\\\\\\\\eclipse-workspace\\\\\\\\JAVA MINIPROJECT2\\\\\\\\bin\\\\\\\\Accountant Details\\\\\\\\Student_Details.txt ");
 			  try {
