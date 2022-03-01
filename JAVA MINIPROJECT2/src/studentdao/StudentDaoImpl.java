@@ -16,9 +16,9 @@ import java.util.Scanner;
 
 public class StudentDaoImpl implements StudentDao {
 
-	public void AddStudent(Student s1) {
+	public void addstudent(Student s1) {
 		// TODO Auto-generated method stub
-				String lineToAppend=("\n"+s1.getRoll_no()+"\t\t"+s1.getName()+"\t\t"+s1.getEmail()+"\t\t"+s1.getCourse()+"\t\t"+s1.getFee()+"\t\t"+s1.getPaid()+"\t\t"+s1.getDue()+"\t\t"+s1.getAddress()+"\t\t"+s1.getCity()+"\t\t"+s1.getState()+"\t\t"+s1.getCountry()+"\t\t"+s1.getContact_no());    
+				String lineToAppend=("\n"+s1.getrollno()+"\t\t"+s1.getname()+"\t\t"+s1.getemail()+"\t\t"+s1.getcourse()+"\t\t"+s1.getfee()+"\t\t"+s1.getpaid()+"\t\t"+s1.getdue()+"\t\t"+s1.getaddress()+"\t\t"+s1.getcity()+"\t\t"+s1.getstate()+"\t\t"+s1.getcountry()+"\t\t"+s1.getcontactno());    
 				File input=new File("C:\\\\\\\\Users\\\\\\\\pcplanet\\\\\\\\eclipse-workspace\\\\\\\\JAVA MINIPROJECT2\\\\\\\\bin\\\\\\\\Accountant Details\\\\\\\\Student_Details.txt");
 				  try {
 					if (input.createNewFile()) {
@@ -56,7 +56,7 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public void  ViewStudent() {
+	public void  viewstudent() {
 		// TODO Auto-generated method stub 
 		System.out.println("##########Student details are:Roll_No,Name,Email,Course,Fess,Paid,Due,Address,City,State,Country,Contact_no");
 		FileReader fr1 = null;
@@ -78,78 +78,42 @@ public class StudentDaoImpl implements StudentDao {
 			e.printStackTrace();
 		}
 	}
-	public void EditStudent(String j) {
-		// TODO Auto-generated method stub
-
-		//boolean z=false;
-	//	System.out.println("Enter the Roll_no of student you want to Edit");
-	//	Scanner sc=new Scanner(System.in);
-	//	String j=sc.nextLine();
-	/*FileReader fr = null;
-		try {
-			fr = new FileReader("C:\\\\\\\\Users\\\\\\\\pcplanet\\\\\\\\eclipse-workspace\\\\\\\\JAVA MINIPROJECT2\\\\\\\\bin\\\\\\\\Accountant Details\\\\\\\\Student_Details.txt");
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		BufferedReader br2=new BufferedReader(fr);
-		String str=" ";
-		try {
-			while((str=br2.readLine()) != null)
-			{
-				if(str.startsWith(j))
-				{
-					z=true;
-					break;
-				}
-			}
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		if (z)
-		{*/
+	public void editstudent(Student  s) {
 			String str5=" ";
-		 //	System.out.println("Record is being loaded");
-		//System.out.println("Student details are:Roll_no,Name,Email,Course, Fee,Paid,Due,Address,City,State,Country,ContactNo");
-	   //System.out.println(str);
-			Student s=new Student();
+			/*Student s=new Student();
 			System.out.println("For data Updation:");
 			Scanner sc51 = new Scanner(System.in);
 			System.out.println("Enter Roll Number:");
-			 s.setRoll_no(sc51.nextInt());
+			 s.setrollno(sc51.nextInt());
 			System.out.println("Enter Name:");
-			 s.setName(sc51.next());	
+			 s.setname(sc51.next());	
 			System.out.println("Enter Email:");
-			  s.setEmail(sc51.next());
+			  s.setemail(sc51.next());
 			System.out.println("Enter Course:");
-			  s.setCourse(sc51.next());
+			  s.setcourse(sc51.next());
 			System.out.println("Enter Total Fees:");
-			s.setFee(sc51.nextInt());
+			s.setfee(sc51.nextInt());
 			System.out.println("Enter Amount Paid:");
-			s.setPaid(sc51.nextInt());
+			s.setpaid(sc51.nextInt());
 			System.out.println("Enter Due Amount:");
-			s.setDue(sc51.nextInt());
+			s.setdue(sc51.nextInt());
 			System.out.println("Enter Address:");
-			  s.setAddress(sc51.next());
+			  s.setaddress(sc51.next());
 			System.out.println("Enter City:");
-			  s.setCity(sc51.next());
+			  s.setcity(sc51.next());
 			System.out.println("Enter State:");
-			  s.setState(sc51.nextLine());
+			  s.setstate(sc51.nextLine());
 			System.out.println("Enter Country:");
-			  s.setCountry(sc51.next());
+			  s.setcountry(sc51.next());
 			System.out.println("Enter Contact Number:");
-			  s.setContact_no(sc51.next());
-			  String lineToAppend=("\n"+s.getRoll_no()+"\t\t"+s.getName()+"\t\t"+s.getEmail()+"\t\t"+s.getCourse()+"\t\t"+s.getFee()+"\t\t"+s.getPaid()+"\t\t"+s.getDue()+"\t\t"+s.getAddress()+"\t\t"+s.getCity()+"\t\t"+s.getState()+"\t\t"+s.getCountry()+"\t\t"+s.getContact_no());    
+			  s.setcontactno(sc51.next());*/
+			  String lineToAppend=("\n"+s.getname()+"\t\t"+s.getemail()+"\t\t"+s.getcourse()+"\t\t"+s.getfee()+"\t\t"+s.getpaid()+"\t\t"+s.getdue()+"\t\t"+s.getaddress()+"\t\t"+s.getcity()+"\t\t"+s.getstate()+"\t\t"+s.getcountry()+"\t\t"+s.getcontactno());    
 			File myobj2=new File("C:\\\\\\\\Users\\\\\\\\pcplanet\\\\\\\\eclipse-workspace\\\\\\\\JAVA MINIPROJECT2\\\\\\\\bin\\\\\\\\Accountant Details\\\\\\\\Student_Details.txt ");
 			  try {
 				if (myobj2.createNewFile())
 				  {
 				        System.out.println("File created: " + myobj2.getName());
 				   }
-     //  else {
-		//		        System.out.println("File already exists.");
-		//		  }
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -170,13 +134,9 @@ public class StudentDaoImpl implements StudentDao {
 			}
 		System.out.println("Data Updated successfully");
 			}
-		//else
-		//{
-		//System.out.println("Enter valid Roll_No");
-		//}
 
 	@Override
-	public void DueStudent() {
+	public void duestudent() {
 		// TODO Auto-generated method stub
 		System.out.println("Due fee is");
 		FileReader fr1 = null;
@@ -199,8 +159,7 @@ public class StudentDaoImpl implements StudentDao {
 		}
 		}
 
-	@Override
-	public void Logout() {
+	public void logout() {
 		// TODO Auto-generated method stub
 		{
 			System.out.println("logout Successfully");
@@ -244,18 +203,17 @@ public class StudentDaoImpl implements StudentDao {
 			String q="UPDATE student SET Name = ?, Email= ?, Course = ?,Fee=?,Paid=?,Due=?,Address=?,City=?,State=?,Country=?,Contact_No=?"+"Where Roll_No=?";
 			 PreparedStatement statement = 
 				     conn.prepareStatement(q);
-			 statement.setString(1, s1.getName());
-			  statement.setString(2, s1.getEmail());
-			  statement.setString(3, s1.getCourse());
-			  statement.setLong(4, s1.getFee());
-			  statement.setLong(5, s1.getPaid());
-			  statement.setLong(6, s1.getDue());
-			  statement.setString(7, s1.getAddress());
-			  statement.setString(8, s1.getCity());
-			  statement.setString(9, s1.getState());
-			  statement.setString(10, s1.getCountry());
-			  statement.setString(11, s1.getContact_no());
-			 // statement.setInt(12, s1.getRoll_no());
+			 statement.setString(1, s1.getname());
+			  statement.setString(2, s1.getemail());
+			  statement.setString(3, s1.getcourse());
+			  statement.setLong(4, s1.getfee());
+			  statement.setLong(5, s1.getpaid());
+			  statement.setLong(6, s1.getdue());
+			  statement.setString(7, s1.getaddress());
+			  statement.setString(8, s1.getcity());
+			  statement.setString(9, s1.getstate());
+			  statement.setString(10, s1.getcountry());
+			  statement.setString(11, s1.getcontactno());
 			 statement.setInt(12, a);
 			  statement.executeUpdate();	
 		}
@@ -289,13 +247,9 @@ public class StudentDaoImpl implements StudentDao {
 		// TODO Auto-generated method stub
 	int c=0;
 			String q="  SELECT *from student where Roll_No='"+p+"'";
-			//String S=" SELECT COUNT(*) from student where Roll_no='"+p+"'";
 			Connection	conn = DriverManager.getConnection(dbURL, username, password);
 			Statement stmt=conn.createStatement();
 			ResultSet rs=stmt.executeQuery(q);
-			//while(rs.next())
-			//{   c = rs.getInt(1);
-			//}
 				 while(  rs.next())
 				 {
 					 System.out.println("Roll_No:"+rs.getString(1)+"               Name:"+rs.getString(2)+"                 Email:"+rs.getString(3)+"            Course:"+rs.getString(4)+"            Fee:"+rs.getString(5)+"            Paid:"+rs.getString(6)+"            Due:"+rs.getString(7)+"            Address:"+rs.getString(8)+"            City:"+rs.getString(9)+"            State:"+rs.getString(10)+"            Country:"+rs.getString(11)+"            Contact_No:"+rs.getString(12));
@@ -309,19 +263,16 @@ public class StudentDaoImpl implements StudentDao {
 	
 
 	
-	@Override
-	public void logoutdb() {
-		// TODO Auto-generated method stub
-		System.out.println("Logout Succesfully!!");
-	}
+	
 
 	@Override
 	public void addstudentdb(Student A) {
 		// TODO Auto-generated method stub
 		try {
+			
 			 Connection conn = DriverManager.getConnection(dbURL, username, password);
 			Statement stmt=conn.createStatement();
-			stmt.executeLargeUpdate("insert into student  values('"+A.getRoll_no()+"','"+A.getName()+"','"+A.getEmail()+"','"+A.getCourse()+"','" +A.getFee()+" ','"+A.getPaid()+"','"+A.getDue()+"','"+A.getAddress()+"','"+A.getCity()+"','"+A.getState()+"','"+A.getCountry()+"','"+A.getContact_no()+"')");
+			stmt.executeLargeUpdate("insert into student  values('"+A.getrollno()+"','"+A.getname()+"','"+A.getemail()+"','"+A.getcourse()+"','" +A.getfee()+" ','"+A.getpaid()+"','"+A.getdue()+"','"+A.getaddress()+"','"+A.getcity()+"','"+A.getstate()+"','"+A.getcountry()+"','"+A.getcontactno()+"')");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

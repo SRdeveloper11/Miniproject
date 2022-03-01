@@ -1,80 +1,80 @@
 package studentdao;
 
 public class Student {
-private String Name,Email,Course,Address,City,State,Country,Contact_no;
-private int Fee,Paid,Due, Roll_no;
+private String name,email,course,address,city,state,country,contactno;
+private int fee,paid,due, rollno;
 
-	public int getRoll_no() {
-		return Roll_no;
+	public int getrollno() {
+		return rollno;
 	}
-	public void  setRoll_no(int roll_no) {
-		Roll_no = roll_no;
+	public void  setrollno(int rollno1) {
+		rollno = rollno1;
 	}
-	public String getName() {
-		return Name;
+	public String getname() {
+		return name;
 	}
-	public void setName(String name) {
-		Name = name;
+	public void setname(String name1) {
+		name = name1;
 	}
-	public String getEmail() {
-		return Email;
+	public String getemail() {
+		return email;
 	}
-	public void setEmail(String email) {
-		Email = email;
+	public void setemail(String email1) {
+		email = email1;
 	}
-	public String getCourse() {
-		return Course;
+	public String getcourse() {
+		return course;
 	}
-	public void setCourse(String course) {
-		Course = course;
+	public void setcourse(String course1) {
+		course = course1;
 	}
-	public String getAddress() {
-		return Address;
+	public String getaddress() {
+		return address;
 	}
-	public void setAddress(String address) {
-		Address = address;
+	public void setaddress(String address1) {
+		address = address1;
 	}
-	public String getCity() {
-		return City;
+	public String getcity() {
+		return city;
 	}
-	public void setCity(String city) {
-		City = city;
+	public void setcity(String city1) {
+		city = city1;
 	}
-	public String getState() {
-		return State;
+	public String getstate() {
+		return state;
 	}
-	public void setState(String state) {
-		State = state;
+	public void setstate(String state1) {
+		state = state1;
 	}
-	public String getCountry() {
-		return Country;
+	public String getcountry() {
+		return country;
 	}
-	public void setCountry(String country) {
-		Country = country;
+	public void setcountry(String country1) {
+		country = country1;
 	}
-	public String getContact_no() {
-		return Contact_no;
+	public String getcontactno() {
+		return contactno;
 	}
-	public void setContact_no(String contact_no) {
-		Contact_no = contact_no;
+	public void setcontactno(String contactno1) {
+		contactno = contactno1;
 	}
-	public int getFee() {
-		return Fee;
+	public int getfee() {
+		return fee;
 	}
-	public void setFee(int fee) {
-		Fee = fee;
+	public void setfee(int fee1) {
+		fee = fee1;
 	}
-	public int getPaid() {
-		return Paid;
+	public int getpaid() {
+		return paid;
 	}
-	public void setPaid(int paid) {
-		Paid = paid;
+	public void setpaid(int paid1) {
+		paid = paid1;
 	}
-	public int getDue() {
-		return Due;
+	public int getdue() {
+		return due;
 	}
-	public void setDue(int due) {
-		Due = due;
+	public void setdue(int due1) {
+		due = due1;
 	}
 	
 }

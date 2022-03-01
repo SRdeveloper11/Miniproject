@@ -1,24 +1,28 @@
-package studentdao;
+package admindbdao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-public class AdminLoginSectiondatabsedaoimpl implements AdminLogindatabasedao  {
+public class AdmindbDaoimpl implements AdmindbDao{
 	String dbURL = "jdbc:mysql://localhost/feereport";
 	 String username = "root";
 	 String password = "shivam@123";
-	public AdminLoginSectiondatabsedaoimpl() throws SQLException
+	public AdmindbDaoimpl() throws SQLException
 	{
-	
+		 try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
 	  Connection conn = DriverManager.getConnection(dbURL, username, password);
 	         Statement stmt = conn.createStatement();
 	}
 
-	@Override
-	public void View_Accounatnt() {
+
+	public void viewaccounatnt() {
 		// TODO Auto-generated method stub
 try {
 	String q="SELECT *from Accountant";
@@ -35,21 +39,23 @@ System.out.println(rs.getString(1)+"            "+rs.getString(2)+"       "+rs.g
 	e.printStackTrace();
 	}
 	}
-	@Override
-	public void logout() {
-		// TODO Auto-generated method stub
-		System.out.println("Logout Successfully!!");
-	}
-	public void Add_Accounatnt( AdminLogindatabase a) {
+	public void addaccounatnt( Admindb  a) {
 		// TODO Auto-generated method stub
 		
 		try {
+			 try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}  
 			 Connection conn = DriverManager.getConnection(dbURL, username, password);
 			Statement stmt=conn.createStatement();
-			stmt.executeLargeUpdate("insert into accountant values('"+a.getName()+"','"+a.getPassword()+"','"+a.getEmail()+"','"+a.getContact_NO()+"')");
+			stmt.executeLargeUpdate("insert into accountant values('"+a.getname()+"','"+a.getpassword()+"','"+a.getemail()+"','"+a.getcontactno()+"')");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
+
+}
 }
